@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <img id="title-image" src="assets/images/hangman-title.png" alt="Hangman Title Image"/> -->
+        <div class="row">
+            <div class="col-md-6 gameplay-column">
+                <h2 id="pressKeyTryAgain">Press Any Key to Try Again!</h2>
+                <img id="hangman-Image" src=""/>
+            </div>
+            <div class="col-md-6 gameplay-column">
+                <h2>Press A-Z to Make a Guess!</h2>
+                <h4>Wins</h4>
+                <h5 id="wins"></h5>
+                <h4>Current Word</h4>
+                <h3 id="currentWord"></h3>
+                <h4>Remaining Tries</h4>
+                <h6 id="remainingTries"></h6>
+                <h4>Letters Chosen</h4>
+                <h3 id="chosenLetters"></h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
