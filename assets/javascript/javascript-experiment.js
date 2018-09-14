@@ -1,8 +1,10 @@
+
 var possibleLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
 var currentIndex;
-
-var chosenLetter = "";
+console.log(currentIndex);
+var chosenLetter = possibleLetters[currentIndex];
+console.log(chosenLetter);
 
 var numberTries = 13;
 
@@ -24,32 +26,37 @@ function resetGame() {
 gameStart = false;
 remainingTries = numberTries;
 currentIndex = Math.floor(Math.random() * (possibleLetters.length));
+console.log(currentIndex);
 guesses = [];
-chosenLetter = currentIndex;
+
 };
 function makeGuess() {
-      var guessedLetter = event.key.toLowerCase();
+    guessedLetter = event.key.toLowerCase();
       console.log(guessedLetter);
   if (guessedLetter !== chosenLetter) {
-    document.getElementById("guessedLetter").innertext = "event.key";
+    wrongGuesses.push("guessedLetter")
+    document.getElementById("guessedLetter").innertext = guessedLetter;
     remainingTries--;
-    document.getElementById("guessesLeft").innertext = ("Guesses left = " +remainingTries);
+    document.getElementById("guessesLeft").innerHTML = ("Guesses left = " +remainingTries);
   
 };
 };
 function checkWin() {
     if (remainingTries >= 0 && (guessedLetter === chosenLetter)) {
+        hasFinished = true;
         wins++;
-        resetGame();
+        
         document.getElementById("wins").innerText = ("Wins = "+ wins);
+        resetGame();
     }
 };
 function checkLoss() {
 if (remainingTries === 0) {
     hasFinished = true; 
     losses++;
-    resetGame();
+    
     document.getElementById("losses").innerText = ("Losses = "+ losses);
+    resetGame();
 }
 };
 document.onkeydown = function(event) {
