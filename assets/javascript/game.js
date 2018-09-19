@@ -51,7 +51,7 @@ function resetGame() {
     chosenLetters = [];
     currentWord = [];
     // clears hangman image
-    document.getElementById("hangman-Image").src = "";
+    document.getElementById("hangman-image").src = "";
     // current word guessing
     for (var i = 0; i < wordChoices[currentIndex].length; i++) {
         currentWord.push("_");
